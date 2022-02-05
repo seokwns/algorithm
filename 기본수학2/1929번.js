@@ -10,7 +10,7 @@ function solution(data) {
     set.delete(1);
     set.add(2);
 
-    for (let i = 3; i < Math.sqrt(end) + 1; i++) {
+    for (let i = 3; i < Math.sqrt(end) + 1; i += 2) {
         if (set.has(i)) {
             for (let k = i * i; k <= end; k += i) {
                 set.delete(k);

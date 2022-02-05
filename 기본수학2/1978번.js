@@ -4,8 +4,8 @@ function solution(data) {
 
     let prime_numbers = [0, 0, 1, 1, 0, 1];
 
-    for (let i = 2, len = 500; i <= len; i++) {
-        for (let j = 2; j <= 1000 / j; j++) {
+    for (let i = 2, len = Math.sqrt(1000); i <= len; i++) {
+        for (let j = 2; i * j <= 1000; j++) {
             prime_numbers[i * j] = 0;
         }
     }
