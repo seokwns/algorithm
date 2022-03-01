@@ -52,7 +52,8 @@ function isInt(num) {
 }
 
 
-let fs = require('fs');
-let input = parseInt(fs.readFileSync('/dev/stdin').toString())
+// let fs = require('fs');
+// let input = parseInt(fs.readFileSync('/dev/stdin').toString())
 
-solution(input);
+// solution(input);
+solution(4998)
