@@ -30,7 +30,9 @@ function solution(data) {
 }
 
 
-let fs = require('fs');
-let input = fs.readFileSync('/dev/stdin').toString();
+// let fs = require('fs');
+// let input = fs.readFileSync('/dev/stdin').toString();
 
-solution(input);
+// solution(input);
+
+solution('8')
