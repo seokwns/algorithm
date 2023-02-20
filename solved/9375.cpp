@@ -6,16 +6,7 @@
 using namespace std;
 
 
-void get_input(map<string, vector<string>>& dresses) {
-    int dress_count = 0;
-    cin >> dress_count;
-    for (int j = 0; j < dress_count; j++) {
-        add_dresses(dresses);
-    }
-}
-
-
-void add_dresses(map<string, vector<string>>& dresses) {
+void get_dresses(map<string, vector<string>>& dresses) {
     string dress;
     string dress_type;
     cin >> dress >> dress_type;
@@ -39,7 +30,11 @@ int main(void) {
     cin >> test_case;
     for (int i = 0; i < test_case; i++) {
         map<string, vector<string>> dresses;
-        get_input(dresses);
+        int dress_count = 0;
+        cin >> dress_count;
+        for (int j = 0; j < dress_count; j++) {
+            get_dresses(dresses);
+        }
         int collection = get_dress_collection(dresses);
         results.push_back(collection);
     }

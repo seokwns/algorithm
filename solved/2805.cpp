@@ -14,7 +14,6 @@ void get_input(vector<int>& trees, int tree_count) {
 }
 
 
-// 잘린 나무의 길이 합은 int 범위를 초과할 수 있으므로 long long 으로 선언해줘야 한다.
 long long get_cutted_length(vector<int>& trees, int target_length) {
     long long result = 0;
     int len = trees.size();

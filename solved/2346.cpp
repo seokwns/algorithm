@@ -8,33 +8,33 @@ int main(void) {
     int n;
     cin >> n;
 
-    deque<pair<int, int>> inputs;
+    deque<pair<int, int>> in;
 
     for (int i = 0; i < n; i++) {
         int temp;
         cin >> temp;
-        inputs.push_back(make_pair(i + 1, temp));
+        in.push_back(make_pair(i + 1, temp));
     }
 
-    int len = inputs.size();
+    int len = in.size();
     int result = 0;
 
     while(true) {
-        cout << inputs.front().first << " ";
-        int cnt = inputs.front().second;
-        inputs.pop_front();
-        if (inputs.empty()) break;
+        cout << in.front().first << " ";
+        int cnt = in.front().second;
+        in.pop_front();
+        if (in.empty()) break;
         
         if (cnt >= 0) {
             for (int i = 0; i < cnt - 1; i++) {
-                inputs.push_back(inputs.front());
-                inputs.pop_front();
+                in.push_back(in.front());
+                in.pop_front();
             }
         }
         if (cnt < 0) {
             for (int i = 0; i < abs(cnt); i++) {
-                inputs.push_front(inputs.back());
-                inputs.pop_back();
+                in.push_front(in.back());
+                in.pop_back();
             }
         }
     }
