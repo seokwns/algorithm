@@ -2,7 +2,6 @@
 https://www.acmicpc.net/problem/6236
 */
 #include <iostream>
-#include <algorithm>
 #include <vector>
 using namespace std;
 
